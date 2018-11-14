@@ -1,0 +1,77 @@
+---
+label: Config
+hide_body: true
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Title
+    description: Site title
+    config:
+      required: true
+  - type: field_group
+    name: banner
+    label: Banner Configuration
+    fields:
+      - type: list
+        name: image_list
+        label: Banner Images
+        description: A list of images to be displayed in a slide show in the page banner
+  - type: select
+    name: palette
+    label: Color Palette
+    description: The color palette used for the page.
+    default: blue
+    config:
+      required: true
+      source:
+        type: custom
+      options:
+        - blue
+        - cyan
+        - green
+        - magenta
+  - type: field_group
+    name: palettes
+    hidden: true
+    fields:
+      - type: field_group
+        name: blue
+        fields:
+          - type: field_group
+            name: sass
+            fields:
+              - type: include
+                name: include_sass
+                label: Sass
+                template: sass
+      - type: field_group
+        name: cyan
+        fields:
+          - type: field_group
+            name: sass
+            fields:
+              - type: include
+                name: include_sass
+                label: Sass
+                template: sass
+      - type: field_group
+        name: green
+        fields:
+          - type: field_group
+            name: sass
+            fields:
+              - type: include
+                name: include_sass
+                label: Sass
+                template: sass
+      - type: field_group
+        name: magenta
+        fields:
+          - type: field_group
+            name: sass
+            fields:
+              - type: include
+                name: include_sass
+                label: Sass
+                template: sass

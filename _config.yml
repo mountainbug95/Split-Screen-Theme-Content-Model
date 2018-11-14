@@ -1,0 +1,28 @@
+title: Split Screen
+baseurl: /
+banner:
+  image_list:
+    - path: images/pic01.jpg
+    - path: images/pic02.jpg
+    - path: images/pic03.jpg
+    - path: images/pic04.jpg
+    - path: images/pic05.jpg
+palette: blue
+palettes:
+  blue:
+    sass:
+      color: '#64a9e9'
+  cyan:
+    sass:
+      color: '#58cfca'
+  green:
+    sass:
+      color: '#6ec27e'
+  magenta:
+    sass:
+      color: '#e0749a'
+sass:
+  indentWidth: 4
+  style: nested
+  precision: 10
+permalink: '/posts/:slug:output_ext'

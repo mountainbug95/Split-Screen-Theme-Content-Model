@@ -1,0 +1,76 @@
+---
+label: Home
+hide_body: true
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Page Title
+    description: The small bolded text displayed at the top of the page
+    config:
+      required: true
+  - type: textarea
+    name: subtitle
+    label: Page Subtitle
+    description: The large text displayed below the page title
+    config:
+      required: true
+  - type: field_group
+    name: footer
+    label: Page Footer
+    fields:
+      - type: field_group_list
+        name: social_icons
+        label: Social Media Icons
+        description: >-
+          A list of social media icons to be displayed along the bottom of the
+          page footer
+        config:
+          labelField: title
+        fields:
+          - type: text
+            name: title
+            label: Icon Title
+            config:
+              required: true
+          - type: text
+            name: Icon
+            label: Font Awesome Icon
+          - type: text
+            name: url
+            label: URL
+  - type: field_group_list
+    name: actions
+    label: Action Buttons
+    config:
+      labelField: label
+    fields:
+      - type: text
+        name: label
+        label: Button Label
+        description: The text displayed inside the action button
+        config:
+          required: true
+      - type: text
+        name: url
+        label: URL
+      - type: boolean
+        name: is_primary
+        label: Is Primary
+        description: Gives the button a primary color scheme
+        default: false
+      - type: text
+        name: icon
+        label: Icon
+        description: >-
+          (Font Awesome icon) The icon displayed to the left of the text inside
+          the button
+  - type: text
+    name: layout
+    label: Layout
+    hidden: true
+    default: home
+    config:
+      required: true
+pages:
+  - index.md

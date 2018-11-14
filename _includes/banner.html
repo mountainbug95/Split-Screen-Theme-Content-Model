@@ -1,0 +1,12 @@
+<!-- Banner -->
+<section id="banner">
+    <div class="inner">
+        <div class="content">
+            <ul>
+                {% for image in site.banner.image_list %}
+                    <li><img src="{{ image.path | relative_url }}" alt="" /></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>

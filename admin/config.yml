@@ -1,0 +1,121 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: uploads
+public_folder: /uploads
+collections:
+  - name: config
+    label: Config
+    files:
+      - name: config
+        label: Config
+        file: _config.yml
+        fields:
+          - name: title
+            label: Title
+            widget: text
+            required: true
+          - name: banner
+            widget: object
+            required: false
+            label: Banner Configuration
+            fields:
+              - name: image_list
+                widget: list
+                required: false
+                label: Banner Images
+                hint: >-
+                  A list of images to be displayed in a slide show in the page
+                  banner
+                field:
+                  label: String
+                  name: string
+                  widget: string
+          - name: palette
+            widget: select
+            required: true
+            label: Color Palette
+            default: blue
+            hint: The color palette used for the page.
+            options:
+              - blue
+              - cyan
+              - green
+              - magenta
+          - name: palettes
+            widget: hidden
+            required: false
+  - name: home
+    label: Home
+    files:
+      - name: home
+        label: Home
+        file: index.md
+        fields:
+          - name: title
+            widget: string
+            required: true
+            label: Page Title
+            hint: The small bolded text displayed at the top of the page
+          - name: subtitle
+            widget: text
+            required: true
+            label: Page Subtitle
+            hint: The large text displayed below the page title
+          - name: footer
+            widget: object
+            required: false
+            label: Page Footer
+            fields:
+              - name: social_icons
+                widget: list
+                required: false
+                label: Social Media Icons
+                hint: >-
+                  A list of social media icons to be displayed along the bottom
+                  of the page footer
+                fields:
+                  - name: title
+                    widget: string
+                    required: true
+                    label: Icon Title
+                  - name: Icon
+                    widget: string
+                    required: false
+                    label: Font Awesome Icon
+                  - name: url
+                    widget: string
+                    required: false
+                    label: URL
+          - name: actions
+            widget: list
+            required: false
+            label: Action Buttons
+            fields:
+              - name: label
+                widget: string
+                required: true
+                label: Button Label
+                hint: The text displayed inside the action button
+              - name: url
+                widget: string
+                required: false
+                label: URL
+              - name: is_primary
+                widget: boolean
+                required: false
+                label: Is Primary
+                default: false
+                hint: Gives the button a primary color scheme
+              - name: icon
+                widget: string
+                required: false
+                label: Icon
+                hint: >-
+                  (Font Awesome icon) The icon displayed to the left of the text
+                  inside the button
+          - name: layout
+            widget: hidden
+            required: true
+            label: Layout
+            default: home
