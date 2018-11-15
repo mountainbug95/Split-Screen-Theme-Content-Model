@@ -27,10 +27,11 @@ collections:
                 hint: >-
                   A list of images to be displayed in a slide show in the page
                   banner
-                field:
-                  label: String
-                  name: string
-                  widget: string
+                fields:
+                  - name: path
+                    widget: image
+                    required: true
+                    label: Image
           - name: palette
             widget: select
             required: true
@@ -79,10 +80,11 @@ collections:
                     widget: string
                     required: true
                     label: Icon Title
-                  - name: Icon
+                  - name: icon
                     widget: string
                     required: false
-                    label: Font Awesome Icon
+                    label: Icon
+                    hint: Font Awesome Icon
                   - name: url
                     widget: string
                     required: false
