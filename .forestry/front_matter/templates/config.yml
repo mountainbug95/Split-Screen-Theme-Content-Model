@@ -13,10 +13,18 @@ fields:
     name: banner
     label: Banner Configuration
     fields:
-      - type: list
+      - type: field_group_list
         name: image_list
         label: Banner Images
         description: A list of images to be displayed in a slide show in the page banner
+        config:
+          labelField: path
+        fields:
+          - type: file
+            name: path
+            label: Image
+            config:
+              required: true
   - type: select
     name: palette
     label: Color Palette
