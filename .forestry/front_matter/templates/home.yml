@@ -34,8 +34,9 @@ fields:
             config:
               required: true
           - type: text
-            name: Icon
-            label: Font Awesome Icon
+            name: icon
+            label: Icon
+            description: Font Awesome Icon
           - type: text
             name: url
             label: URL
