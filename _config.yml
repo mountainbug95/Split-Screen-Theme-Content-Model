@@ -8,7 +8,7 @@ banner:
   - path: images/pic03.jpg
   - path: images/pic04.jpg
   - path: images/pic05.jpg
-palette: green
+palette: magenta
 palettes:
   blue:
     sass:
